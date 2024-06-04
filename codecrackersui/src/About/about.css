@@ -1,0 +1,58 @@
+/* src/components/AboutUsPage.css
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .page-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .page-container.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .page-container.inactive {
+    left: -100%;
+    opacity: 0;
+  }
+   */
+
+   /* src/components/AboutUsPage.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.page-container.active {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.page-container.inactive {
+  opacity: 0;
+  transform: translate(-150%, -50%);
+}

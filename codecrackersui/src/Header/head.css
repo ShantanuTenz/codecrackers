@@ -1,0 +1,21 @@
+.head{
+    height: 80px;
+    border-bottom: 1px solid rgb(102, 100, 100);
+}
+
+.logo{
+    height: 80px;
+    width: 18rem;
+    border-right: 1px solid rgb(102, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-big{
+    display: flex;
+}
+
+.flex-small{
+    display: none;
+}

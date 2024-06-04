@@ -1,0 +1,20 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Doubt;
+import com.example.demo.repository.DoubtRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+public class DoubtServiceImpl implements DoubtService {
+
+    @Autowired
+    private DoubtRepository doubtRepository;
+
+    @Override
+    public Optional<Doubt> getDoubtById(Long id) {
+        return doubtRepository.findById(id);
+    }
+}
