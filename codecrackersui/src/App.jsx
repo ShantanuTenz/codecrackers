@@ -11,8 +11,6 @@ import Doubt from "./Doubt/Doubt";
 import Header from "./Header/Header";
 import LiveDoubt from "./Doubt/LiveDoubt";
 import PersonalDoubt from "./Doubt/PersonalDoubt";
-import rain from './Images/raining.mp4'
-import water from './Images/watercolor.mp4'
 import RegisterForm from "./Doubt/Auth/RegisterForm";
 import LoginForm from "./Doubt/Auth/LoginForm";
 import { useDispatch, useSelector } from "react-redux";

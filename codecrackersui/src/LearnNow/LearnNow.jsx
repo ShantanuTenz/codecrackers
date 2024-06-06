@@ -7,7 +7,7 @@ const LearnNow = () => {
           Welcome to CodeCrackers
         </h1>
       </div>
-    </div>
+    </div> 
   )
 }
 
