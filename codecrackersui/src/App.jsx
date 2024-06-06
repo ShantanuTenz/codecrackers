@@ -16,9 +16,8 @@ import LoginForm from "./Doubt/Auth/LoginForm";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./State/Authentication/Action";
 import store from "./store.js"
-import PaymentSuccess from "./Payment/PaymentSuccess.jsx";
-import PaymentFailure from "./Payment/PaymentFailure.jsx";
 import Verify from "./Doubt/Auth/Verify.jsx";
+import Admin from "./Admin/Admin.jsx";
 
 
 export default function Main() {
@@ -63,6 +62,7 @@ export default function Main() {
             <Header toggleDarkTheme={toggleDarkTheme} />
             <Routes>
               <Route path="/" element={<Home toggleDarkTheme={toggleDarkTheme} />} />
+              <Route path="/admin" element={auth.user?.role == "ADMIN" ? <Admin /> : <LoginForm />} />
               <Route path="/about" element={<About />} />
               <Route path="/doubt" element={<Doubt />} />
               <Route path="/account/register" element={<RegisterForm />} />
@@ -71,8 +71,6 @@ export default function Main() {
               <Route path="/doubt/live" element={<LiveDoubt />} />
               <Route path="/doubt/personal" element={<PersonalDoubt />} />
               <Route path="/learn" element={<LearnNow />} />
-              <Route path="/payment/success/:fullName" element={<PaymentSuccess />} />
-              <Route path="/payment/fail" element={<PaymentFailure />} />
             </Routes>
           </ThemeProvider>
         </div>

@@ -17,4 +17,13 @@ public class DoubtServiceImpl implements DoubtService {
     public Optional<Doubt> getDoubtById(Long id) {
         return doubtRepository.findById(id);
     }
+
+    @Override
+    public Doubt updateStatus(Long id) {
+        Optional<Doubt> doubt = doubtRepository.findById(id);
+        doubt.get().setStatus(!doubt.get().getStatus());
+        doubtRepository.save(doubt.get());
+
+        return doubt.get();
+    }
 }

@@ -52,8 +52,8 @@ public class UserController {
     public ResponseEntity<Map<String, Object>> doubt(@RequestHeader("Authorization") String jwt, @RequestBody DoubtResponse req) throws Exception {
         User user = userService.findUserByJwtToken(jwt);
 
-        Doubt doubt = getDoubt(req, user);
-        doubtRepository.save(doubt);
+//        Doubt doubt = getDoubt(req, user);
+//        doubtRepository.save(doubt);
 
         int amt = (int)req.getPrice();
 

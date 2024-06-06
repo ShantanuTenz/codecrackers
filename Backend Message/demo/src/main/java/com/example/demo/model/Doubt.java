@@ -16,10 +16,10 @@ public class Doubt {
     private String mail;
     private String phoneNumber;
     private String topic;
-    private String status; // doubt is done or pending
+    private boolean status = false; // doubt is done or pending
     private boolean paid = false;
 
-    public Doubt(Long id, String firstName, String mail, String phoneNumber, String topic, String status) {
+    public Doubt(Long id, String firstName, String mail, String phoneNumber, String topic, boolean status) {
         this.id = id;
         this.firstName = firstName;
         this.mail = mail;
@@ -29,7 +29,6 @@ public class Doubt {
     }
 
     public Doubt() {
-
     }
 
     public boolean isPaid() {
@@ -80,11 +79,11 @@ public class Doubt {
         this.topic = topic;
     }
 
-    public String getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 }

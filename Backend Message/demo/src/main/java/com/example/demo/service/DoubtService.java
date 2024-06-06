@@ -6,4 +6,5 @@ import java.util.Optional;
 
 public interface DoubtService {
     Optional<Doubt> getDoubtById(Long id);
+    Doubt updateStatus(Long id);
 }

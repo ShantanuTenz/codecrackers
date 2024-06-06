@@ -4,6 +4,8 @@ import com.example.demo.response.DoubtResponse;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 public class User{
@@ -16,6 +18,9 @@ public class User{
     private String otp;
     private boolean verify;
     private USER_ROLE role = USER_ROLE.ROLE_STUDENT;
+
+    @OneToMany
+    private List<Doubt> doubts;
 
 //    private int freeMeet;
     public User(Long id, String fullName, String email, String password, String otp, USER_ROLE role) {
